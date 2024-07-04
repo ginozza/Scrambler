@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F3F5FC;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 50px;
+}
+
+header p {
+    color: #5b6e93;
+}
+
+
+/* Container Padre */
+.container {
+    width: 90%;
+    height: 80vh;
+    margin: 0px auto 50px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+
+/* Seccion 1 */
+.seccion1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+textarea {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 200px;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    resize: none;
+    color: #0A3871;
+}
+
+textarea::placeholder {
+    color: #0A3871;
+    opacity: 1;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.seccion1 p {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: rgb(49, 68, 84);
+}
+
+.seccion1 button,
+.seccion2 button {
+    border: none;
+    padding: 24px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all ease 400ms;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.seccion1 button:hover,
+.seccion2 button:hover {
+    transform: scale(1.05);
+}
+
+.botones {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.seccion1 .boton-encriptar {
+    background-color: #0A3871;
+    color: #fff;
+    flex: 1;
+}
+
+.seccion1 .boton-desencriptar {
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    flex: 1;
+}
+
+.error {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid rgb(188, 1, 66);
+    color: rgb(188, 1, 66);
+    margin: 7px;
+    border-radius: 16px;
+}
+
+/* Seccion 2 */
+.seccion2 {
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 32px;
+    box-shadow: 0px 0px 8px rgb(195, 205, 216);
+    width: 90%;
+    box-sizing: content-box;
+}
+
+.seccion2 img {
+    width: 150px;
+}
+
+.boton-copiar {
+    border: 1px solid #0A3871 !important;
+    background-color: transparent;
+    color: #0A3871;
+    width: 90%;
+    margin-bottom: 8px;
+    margin-top: auto;
+    position: relative;
+    place-self: center;
+}
+
+.resultado {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.txt-aviso {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #495057;
+}
+
+.salida-texto {
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #495057;
+    top: 1px;
+    text-align: start;
+    padding: 10px;
+    overflow-y: 1;
+}
+
+h3 {
+    color: #343A40;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Mobile desing styles */
+@media (max-width: 550px) {
+    .container {
+        width: 95%;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: none;
+    }
+
+    .seccion1 {
+        height: 250px;
+    }
+
+    textarea {
+        height: 200px;
+    }
+
+    .img-aviso {
+        display: none;
+    }
+
+    .botones{
+        flex-direction: column;
+    }
+
+    .seccion1 {
+        width: 100%;
+        height: 600px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        margin-bottom: 200px;
+
+    }
+
+    .seccion2 {
+        position: relative;
+        top: auto;
+        width: 90%;
+        justify-self: center;
+        padding: 0px;
+    }
+
+    .resultado {
+        padding: 20px;
+    }
+}
+
+/* Sniper */
+@keyframes sk-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sk-circle {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(17, 121, 201, 0.1);
+    border-top-color: rgb(17, 121, 201);
+    border-radius: 50%;
+    animation: sk-rotate 1s linear infinite;
+}

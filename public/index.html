@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../src/styles/style.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <title>Scrambler</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img class="logo" src="../assets/icon.png" alt="Logo Scrambler">
+        </a>
+    </header>
+
+    <div class="container">
+        <div class="seccion1">
+            <textarea id="texto" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="validar">
+                <p> <i class="fa-solid fa-circle-exclamation icono-aviso"></i> Solo letras minusculas y sin acentos</p>
+                <div class="botones">
+                    <button class="boton-encriptar">Encriptar</button>
+                    <button class="boton-desencriptar">Desencriptar</button>
+                </div>
+            </div>
+        </div>
+        <div class="seccion2">
+            <div class="resultado">
+                <img class="img-aviso" src="../assets/locked-padlock.webp" alt="imagen encriptacion">
+                <h3>Ningún mensaje fue encriptado</h3>
+                <p class="txt-aviso">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../src/app.js"></script>
+</body>
+
+</html>
